@@ -12,18 +12,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
     }
     fun onClickMe(view : View) {
         timesClicked++
-        button.setText(timesClicked.toString())
+        button.text = timesClicked.toString()
 
         if(timesClicked == 10) {
             Toast.makeText(this, "Only 10???", Toast.LENGTH_LONG).show()
         }
         else if(timesClicked == 20) {
-            Toast.makeText(this, "Wow, doubled I see. But still, just 20. SADSADSAD", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Wow, doubled I see. But still, just 20. SAD", Toast.LENGTH_LONG).show()
         }
     }
 }
