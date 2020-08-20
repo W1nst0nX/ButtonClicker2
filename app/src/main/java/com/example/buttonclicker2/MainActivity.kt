@@ -13,13 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        fun onClickMe(view : View) {
-            timesClicked++
-            button.setText(timesClicked.toString())
 
-            if(timesClicked == 10) {
-                Toast.makeText(this, "Only 10???", Toast.LENGTH_LONG).show()
-            }
+    }
+    fun onClickMe(view : View) {
+        timesClicked++
+        button.setText(timesClicked.toString())
+
+        if(timesClicked == 10) {
+            Toast.makeText(this, "Only 10???", Toast.LENGTH_LONG).show()
+        }
+        else if(timesClicked == 20) {
+            Toast.makeText(this, "Wow, doubled I see. But still, just 20. SADSADSAD", Toast.LENGTH_LONG).show()
         }
     }
 }
